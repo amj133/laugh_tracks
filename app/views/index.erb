@@ -1,0 +1,13 @@
+<h1>All Comedians</h1>
+
+<h2>Average age of comedians = <%= @average_age %></h2>
+
+<% if @comedians.class == Comedian %>
+  <p><%= @comedians.name %></p>
+  <p><%= @comedians.age %></p>
+<% else %>
+  <% @comedians.each do |comedian| %>
+    <p><%= comedian.name %></p>
+    <p><%= comedian.age %></p>
+  <% end %>
+<% end %>
